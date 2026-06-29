@@ -33,7 +33,16 @@
         <div class="hero-copy">
           <h1>GLAMOUR Group<span class="accent-burgundy"></h1>
           <p class="hero-text">
-            Our research sits at the intersection of artificial intelligence, economics, and game theory. How can AI systems make good decisions when they must interact strategically with other intelligent agents, whether those agents are people or other AI systems?
+            Our research sits at the intersection of artificial intelligence, economics, and game theory. We aim to build AI agents that make effective decisions in today’s world, where they interact strategically with other intelligent agents, both AI and human.
+          </p>
+          <p class="hero-text">
+            Examples include:
+            <ul class="hero-list">
+              <li>vehicles negotiating traffic</li>
+              <li>online advertising auctions</li>
+              <li>supply-chain negotiations</li>
+              <li>distributed robotic control</li>
+            </ul>
           </p>
         </div>
 
@@ -74,8 +83,7 @@
           <center>
             <h2>Research Areas</h2>
             <p class="section-description">
-              As AI systems increasingly make decisions on behalf of people (e.g. bidding in auctions, coordinating robots, or negotiating contracts) the key challenge is no longer just making one model accurate. 
-              It is ensuring that many autonomous systems interact in ways that are stable, efficient, and socially desirable.
+              As AI agents increasingly make decisions on behalf of people (e.g., scheduling meetings, bidding in auctions, coordinating robots, or negotiating contracts), the key challenge is ensuring that the interactions of multiple autonomous systems are stable, efficient, and socially desirable.
             </p>
           </center>
         </div>
@@ -91,20 +99,7 @@
               aria-controls="research-panel-multi-agent-ai"
               data-research-target="multi-agent-ai"
             >
-              <span class="research-tab-title">Multi-Agent AI</span>
-              <span class="research-tab-summary">Learning in environments where multiple intelligent systems adapt at the same time.</span>
-            </button>
-
-            <button
-              class="research-tab"
-              type="button"
-              role="tab"
-              id="research-tab-marl"
-              aria-selected="false"
-              aria-controls="research-panel-marl"
-              data-research-target="marl"
-            >
-              <span class="research-tab-title">Multi-Agent RL</span>
+              <span class="research-tab-title">Multiagent Learning</span>
               <span class="research-tab-summary">Decision-making, adaptation, and equilibrium behavior in complex strategic settings.</span>
             </button>
 
@@ -118,7 +113,7 @@
               data-research-target="algorithmic-game-theory"
             >
               <span class="research-tab-title">Algorithmic Game Theory</span>
-              <span class="research-tab-summary">Applying game theory and economics to AI systems.</span>
+              <span class="research-tab-summary">Can AI and algorithmic thinking be used to improve social outcomes in multiagent systems, while taking account of individual agent’s incentives?</span>
             </button>
 
             <button
@@ -130,8 +125,8 @@
               aria-controls="research-panel-llm-agents"
               data-research-target="llm-agents"
             >
-              <span class="research-tab-title">LLM Agents</span>
-              <span class="research-tab-summary">Reasoning, planning, and communication with language models acting as agents.</span>
+              <span class="research-tab-title">Strategic LLMs</span>
+              <span class="research-tab-summary">We aim to use LLMs for strategic decision making in multiagent environments.</span>
             </button>
           </div>
 
@@ -144,39 +139,13 @@
               data-research-panel="multi-agent-ai"
             >
               <div class="research-panel-copy">
-                <h3>Multi-Agent AI</h3>
+                <h3>Multiagent Learning</h3>
                 <p>
-                  Most AI algorithms assume a fixed environment. We study environments where everyone is learning at the same time. Examples include:
+                  In multiagent systems, the challenge is that each agent's best strategy depends on what the other agents are doing. When multiple agents are learning at the same time, some key questions include:
                 </p>
                 <ul class="research-panel-points">
-                  <li>autonomous vehicles negotiating traffic,</li>
-                  <li>online advertising auctions,</li>
-                  <li>supply-chain negotiations,</li>
-                  <li>distributed robots.</li>
-                </ul>
-                <p>
-                  The challenge is that one agent's optimal strategy depends on what every other agent is doing, making the environment continually changing ("non-stationary").
-                </p>
-              </div>
-            </article>
-
-            <article
-              class="research-panel"
-              role="tabpanel"
-              id="research-panel-marl"
-              aria-labelledby="research-tab-marl"
-              data-research-panel="marl"
-              hidden
-            >
-              <div class="research-panel-copy">
-                <h3>Multi-Agent RL</h3>
-                <p>
-                  Questions include:
-                </p>
-                <ul class="research-panel-points">
-                  <li>Can agents learn to cooperate? When do they compete?</li>
-                  <li>Will learning converge to stable behavior?</li>
-                  <li>Can learning algorithms reach game-theoretic equilibria?</li>
+                  <li>Will learning converge to stable behavior? E.g., game-theoretic equilibria?</li>
+                  <li>Can agents learn to cooperate and arrive at socially-desirable outcomes?</li>
                 </ul>
               </div>
             </article>
@@ -192,13 +161,15 @@
               <div class="research-panel-copy">
                 <h3>Algorithmic Game Theory</h3>
                 <p>
-                  We study ideas like:
+                  Key questions include:
                 </p>
                 <ul class="research-panel-points">
-                  <li>Nash equilibria,</li>
-                  <li>correlated equilibria,</li>
-                  <li>no-regret learning</li>
+                  <li>Can equilibria be computed efficiently?</li>
+                  <li>How can we explain the long-run behavior of multiple strategic learning agents?</li>
                 </ul>
+                <p>
+                  Applications include designing online auctions and marketplaces on the one hand, and autonomous bidding, trading, and negotiating agents on the other.
+                </p>
               </div>
             </article>
 
@@ -211,14 +182,10 @@
               hidden
             >
               <div class="research-panel-copy">
-                <h3>LLMs and Game Theory</h3>
+                <h3>Strategic LLMs</h3>
                 <p>
-                  We aim to use LLMs for strategic decision-making in multi-agent environments.
+                  LLMs have been reported to be notoriously bad at strategic decision making. For example, they cannot play the game of Tic-Tac-Toe, even though its solution is a part of their training data. We are endeavoring to build agent harnesses that guide LLM agents in multiagent settings.
                 </p>
-                <ul class="research-panel-points">
-                  <li>What harnesses or context can be used to guide LLM agents in multi-agent settings?</li>
-                  <li>How can we use LLMs to model strategic environments?</li>
-                </ul>
               </div>
             </article>
           </div>
