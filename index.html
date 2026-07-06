@@ -8,186 +8,207 @@
     name="description"
     content="The GLAMOUR Group at Brown University studies game theory, markets, learning agents, and LLM agents."
   >
-  <link href="https://fonts.googleapis.com/css2?family=Gilda+Display&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:ital,wght@0,100..900;1,100..900&family=Manrope:wght@200..800&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+  
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header class="site-header">
     <div class="container nav-bar">
       <a class="brand" href="#" aria-label="GLAMOUR GROUP home">
-        <img class="brand-logo" src="images/graphics/brown_logo.png" alt="Brown logo">
         <span>GLAMOUR GROUP</span>
       </a>
       <nav class="main-nav" aria-label="Primary">
-        <a href="#news">News</a>
-        <a href="#research">Research</a>
-        <a href="#people">People</a>
-        <a href="#publications">Publications</a>
+        <!-- <a href="#news">NEWS</a> -->
+        <a href="#research">RESEARCH</a>
+        <a href="#people">PEOPLE</a>
+        <a href="#publications">PUBLICATIONS</a>
       </nav>
     </div>
   </header>
 
   <main>
     <section class="hero">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="field-layer" aria-hidden="true">
+        <canvas id="coordination-field" class="hero-canvas"></canvas>
+      </div>
+      <div class="field-mask" aria-hidden="true"></div>
+
       <div class="container hero-grid">
         <div class="hero-copy">
-          <h1>GLAMOUR Group<span class="accent-burgundy"></h1>
-          <p class="hero-text">
-            Our research sits at the intersection of artificial intelligence, economics, and game theory. We aim to build AI agents that make effective decisions in today’s world, where they interact strategically with other intelligent agents, both AI and human.
-          </p>
-          <p class="hero-text">
-            Examples include:
-            <ul class="hero-list">
-              <li>vehicles negotiating traffic</li>
-              <li>online advertising auctions</li>
-              <li>supply-chain negotiations</li>
-              <li>distributed robotic control</li>
-            </ul>
-          </p>
+          <h1 class="hero-title">GLAMOUR Group<span class="accent-burgundy"></span></h1>
         </div>
-
-        <div class="hero-art" aria-hidden="true">
-          <img src="images/graphics/hero.png" alt="GLAMOUR Group illustration">
+        <div class="hero-figure" aria-hidden="true">
+          <img src="images/graphics/two_people.png" alt="">
         </div>
       </div>
     </section>
 
+    <section class="mission-section" id="mission">
+      <div class="container">
+        <div class="mission-intro">
+          <div class="mission-label">
+            <p class="section-label">Mission</p>
+          </div>
+          <div class="mission-copy">
+            <h2>
+              Our research sits at the intersection of artificial intelligence, economics, and game theory.
+            </h2>
+            <p class="mission-summary">
+              We aim to build AI agents that make effective decisions in today’s world, where they interact strategically with other intelligent agents, both AI and human.
+            </p>
+          </div>
+        </div>
+
+        <div class="mission-gallery" aria-label="Mission examples">
+          <article class="mission-card">
+            <img src="images/graphics/auction_hero.png" alt="Abstract auction landscape">
+            <div class="mission-card-panel">
+              <p class="mission-card-kicker">Strategic settings</p>
+              <h3>Markets and negotiation</h3>
+              <p>We study online advertising auctions, bargaining, and supply-chain negotiations where each decision depends on what other agents may do next.</p>
+            </div>
+          </article>
+
+          <article class="mission-card">
+            <img src="images/graphics/hero.png" alt="Abstract coordination diagram">
+            <div class="mission-card-panel">
+              <p class="mission-card-kicker">Learning dynamics</p>
+              <h3>Multi-agent adaptation</h3>
+              <p>We ask when simultaneous learning converges, when it destabilizes, and how interacting systems can still produce efficient social outcomes.</p>
+            </div>
+          </article>
+
+          <article class="mission-card">
+            <img src="images/graphics/policy_tpzs.png" alt="Policy representation graphic">
+            <div class="mission-card-panel">
+              <p class="mission-card-kicker">Embodied examples</p>
+              <h3>Coordination in the wild</h3>
+              <p>Example domains include vehicles negotiating traffic, distributed robotic control, and language-model agents operating in shared strategic environments.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!--
     <section class="news-section" id="news">
       <div class="container">
         <div class="news-header">
           <div class="section-heading">
-            <h2>Recent News</h2>
+            <p class="section-label">News</p>
+            <h2>Latest news</h2>
           </div>
         </div>
 
         <div class="news-list">
-          <article class="news-row">
+          <article class="news-card news-card-side">
+            <a class="news-card-media" href="https://openreview.net/pdf?id=AnJGQHrq7m">
+              <img src="images/graphics/policy_tpzs.png" alt="Portrait placeholder for research news">
+            </a>
             <p class="news-date">May 2026</p>
-            <h3><a href="https://openreview.net/pdf?id=AnJGQHrq7m">Towards Learning Representations of Policies in Two-Player Zero-Sum Games</a> is accepted as a Spotlight to <a class="news-paper-link"href="https://sites.google.com/view/nextgame-icml26">ICML 2026 NExT-Game Workshop</a>.</h3>
+            <h3>
+              <a href="https://openreview.net/pdf?id=AnJGQHrq7m">Towards Learning Representations of Policies in Two-Player Zero-Sum Games</a>
+            </h3>
+            <p class="news-summary">Accepted as a Spotlight at the ICML 2026 NExT-Game Workshop.</p>
           </article>
-          <article class="news-row">
+
+          <article class="news-card news-card-feature">
             <p class="news-date">April 2026</p>
-            <h3><a href="https://arxiv.org/abs/2509.22335">Spectral Collapse Drives Loss of Plasticity in Deep Continual Learning</a> is accepted to <a class="news-paper-link" href="https://icml.cc/">ICML 2026</a>.</h3>
+            <h3>
+              <a href="https://arxiv.org/abs/2509.22335">Spectral Collapse Drives Loss of Plasticity in Deep Continual Learning</a>
+            </h3>
+            <a class="news-card-media" href="https://arxiv.org/abs/2509.22335">
+              <img src="images/graphics/spectral_collapse.png" alt="Abstract graphic placeholder for featured news">
+            </a>
+            <p class="news-summary">Accepted to ICML 2026, examining how spectral collapse contributes to loss of plasticity in deep continual learning systems.</p>
           </article>
-          <article class="news-row">
+
+          <article class="news-card news-card-side">
             <p class="news-date">March 2026</p>
-            <h3><a href="https://arxiv.org/abs/2605.24375">Distilling Game Code World Model Generation into Lightweight LLMs</a> is accepted to <a class="news-paper-link" href="https://sites.google.com/view/se-aamas2026">AAMAS 2026 Strategic Engineering Workshop</a>.</h3>
+            <h3>
+              <a href="https://arxiv.org/abs/2605.24375">Distilling Game Code World Model Generation into Lightweight LLMs</a>
+            </h3>
+            <a class="news-card-media" href="https://arxiv.org/abs/2605.24375">
+              <img src="auction_isometric.jpg" alt="Isometric placeholder for workshop news">
+            </a>
+            <p class="news-summary">Accepted to the AAMAS 2026 Strategic Engineering Workshop.</p>
           </article>
         </div>
       </div>
     </section>
+    -->
 
     <section class="research-section" id="research">
       <div class="container">
-        <div class="section-heading">
-          <center>
-            <h2>Research Areas</h2>
-            <p class="section-description">
-              As AI agents increasingly make decisions on behalf of people (e.g., scheduling meetings, bidding in auctions, coordinating robots, or negotiating contracts), the key challenge is ensuring that the interactions of multiple autonomous systems are stable, efficient, and socially desirable.
-            </p>
-          </center>
+        <div class="section-heading research-heading">
+          <p class="section-label">Our Research</p>
+          <h2>Research Areas</h2>
+          <p class="section-description">
+            As AI agents increasingly make decisions on behalf of people (e.g., scheduling meetings, bidding in auctions, coordinating robots, or negotiating contracts), the key challenge is ensuring that the interactions of multiple autonomous systems are stable, efficient, and socially desirable.
+          </p>
         </div>
 
-        <div class="research-tabs" data-research-tabs>
-          <div class="research-tab-list" role="tablist" aria-label="Research areas">
-            <button
-              class="research-tab is-active"
-              type="button"
-              role="tab"
-              id="research-tab-multi-agent-ai"
-              aria-selected="true"
-              aria-controls="research-panel-multi-agent-ai"
-              data-research-target="multi-agent-ai"
-            >
-              <span class="research-tab-title">Multiagent Learning</span>
-              <span class="research-tab-summary">Decision-making, adaptation, and equilibrium behavior in complex strategic settings.</span>
+        <div class="research-carousel" data-research-carousel>
+          <div class="research-carousel-viewport">
+            <button class="research-carousel-arrow research-carousel-arrow-left" type="button" aria-label="Previous research area" data-research-prev>
+              <span aria-hidden="true">&#8249;</span>
             </button>
+            <div class="research-carousel-track">
+              <article class="research-slide">
+                <div class="research-slide-media">
+                  <img src="images/graphics/hero.png" alt="Abstract market diagram representing multiagent learning">
+                </div>
+                <div class="research-slide-copy">
+                  <h3>Multiagent Learning: Learning stable behavior in interactive systems</h3>
+                  <p>
+                    In multiagent systems, each agent's best strategy depends on what the other agents are doing. We study whether simultaneous learning can converge to stable game-theoretic behavior and when it can produce cooperative, socially desirable outcomes.
+                  </p>
+                  <ul class="research-slide-points">
+                    <li>Convergence to equilibria in repeated interaction</li>
+                    <li>Cooperation and incentive alignment across agents</li>
+                  </ul>
+                </div>
+              </article>
 
-            <button
-              class="research-tab"
-              type="button"
-              role="tab"
-              id="research-tab-algorithmic-game-theory"
-              aria-selected="false"
-              aria-controls="research-panel-algorithmic-game-theory"
-              data-research-target="algorithmic-game-theory"
-            >
-              <span class="research-tab-title">Algorithmic Game Theory</span>
-              <span class="research-tab-summary">Can AI and algorithmic thinking be used to improve social outcomes in multiagent systems, while taking account of individual agent’s incentives?</span>
+              <article class="research-slide">
+                <div class="research-slide-media">
+                  <img src="auction_isometric.jpg" alt="Isometric auction scene representing algorithmic game theory">
+                </div>
+                <div class="research-slide-copy">
+                  <h3>Algorithmic Game Theory: Designing markets, auctions, and strategic mechanisms</h3>
+                  <p>
+                    We analyze the structure of strategic interaction and ask when equilibria can be computed efficiently. This connects directly to the design of online auctions, marketplaces, and autonomous bidding, trading, and negotiating agents.
+                  </p>
+                  <ul class="research-slide-points">
+                    <li>Efficient equilibrium computation</li>
+                    <li>Long-run behavior of strategic learning agents</li>
+                  </ul>
+                </div>
+              </article>
+
+              <article class="research-slide">
+                <div class="research-slide-media research-slide-media-llm">
+                  <img src="images/people/arjun.jpg" alt="Researcher portrait representing strategic LLM agents">
+                </div>
+                <div class="research-slide-copy">
+                  <h3>Strategic LLMs: Building harnesses for language models in strategic settings</h3>
+                  <p>
+                    Language models are still unreliable at strategic decision-making, even in settings that look simple on paper. We build agent harnesses and evaluation environments that help LLM-based agents reason, coordinate, and act effectively in multiagent worlds.
+                  </p>
+                  <ul class="research-slide-points">
+                    <li>Strategic reasoning with language-model agents</li>
+                    <li>Evaluation environments for coordination and negotiation</li>
+                  </ul>
+                </div>
+              </article>
+            </div>
+            <button class="research-carousel-arrow research-carousel-arrow-right" type="button" aria-label="Next research area" data-research-next>
+              <span aria-hidden="true">&#8250;</span>
             </button>
-
-            <button
-              class="research-tab"
-              type="button"
-              role="tab"
-              id="research-tab-llm-agents"
-              aria-selected="false"
-              aria-controls="research-panel-llm-agents"
-              data-research-target="llm-agents"
-            >
-              <span class="research-tab-title">Strategic LLMs</span>
-              <span class="research-tab-summary">We aim to use LLMs for strategic decision making in multiagent environments.</span>
-            </button>
-          </div>
-
-          <div class="research-panel-stage">
-            <article
-              class="research-panel is-active"
-              role="tabpanel"
-              id="research-panel-multi-agent-ai"
-              aria-labelledby="research-tab-multi-agent-ai"
-              data-research-panel="multi-agent-ai"
-            >
-              <div class="research-panel-copy">
-                <h3>Multiagent Learning</h3>
-                <p>
-                  In multiagent systems, the challenge is that each agent's best strategy depends on what the other agents are doing. When multiple agents are learning at the same time, some key questions include:
-                </p>
-                <ul class="research-panel-points">
-                  <li>Will learning converge to stable behavior? E.g., game-theoretic equilibria?</li>
-                  <li>Can agents learn to cooperate and arrive at socially-desirable outcomes?</li>
-                </ul>
-              </div>
-            </article>
-
-            <article
-              class="research-panel"
-              role="tabpanel"
-              id="research-panel-algorithmic-game-theory"
-              aria-labelledby="research-tab-algorithmic-game-theory"
-              data-research-panel="algorithmic-game-theory"
-              hidden
-            >
-              <div class="research-panel-copy">
-                <h3>Algorithmic Game Theory</h3>
-                <p>
-                  Key questions include:
-                </p>
-                <ul class="research-panel-points">
-                  <li>Can equilibria be computed efficiently?</li>
-                  <li>How can we explain the long-run behavior of multiple strategic learning agents?</li>
-                </ul>
-                <p>
-                  Applications include designing online auctions and marketplaces on the one hand, and autonomous bidding, trading, and negotiating agents on the other.
-                </p>
-              </div>
-            </article>
-
-            <article
-              class="research-panel"
-              role="tabpanel"
-              id="research-panel-llm-agents"
-              aria-labelledby="research-tab-llm-agents"
-              data-research-panel="llm-agents"
-              hidden
-            >
-              <div class="research-panel-copy">
-                <h3>Strategic LLMs</h3>
-                <p>
-                  LLMs have been reported to be notoriously bad at strategic decision making. For example, they cannot play the game of Tic-Tac-Toe, even though its solution is a part of their training data. We are endeavoring to build agent harnesses that guide LLM agents in multiagent settings.
-                </p>
-              </div>
-            </article>
           </div>
         </div>
       </div>
@@ -195,8 +216,9 @@
 
     <section class="people-section" id="people">
       <div class="container">
-        <div class="section-heading">
-          <h2>People</h2>
+        <div class="section-heading research-heading">
+          <p class="section-label">PEOPLE</p>
+          <h2>Meet the Team</h2>
         </div>
 
         <div class="people-grid">
@@ -207,7 +229,7 @@
           </article>
 
           <article class="profile-card">
-            <div class="profile-image" style="background: #a8c5d1;"></div>
+            <div class="profile-image" style="background: #a8c5d1;"><img src="images/people/arjun.jpg" alt="Arjun Prakash"></div>
             <h3>Arjun Prakash</h3>
             <p class="profile-role">PhD Student</p>
           </article>
@@ -249,56 +271,77 @@
     <section class="publications-section" id="publications">
       <div class="container">
         <div class="section-heading">
+          <p class="section-label">Publications</p>
           <h2>Recent Publications</h2>
         </div>
 
         <div class="publications-list">
 
           <article class="publication-row">
+            <a class="publication-media" href="https://openreview.net/pdf?id=AnJGQHrq7m">
+              <img src="images/graphics/policy_tpzs.png" alt="Illustration for two-player zero-sum games paper">
+            </a>
+            <div class="publication-meta">
+              <a href="https://sites.google.com/view/nextgame-icml26" class="publication-venue">ICML 2026 NExT-Game Workshop (Spotlight)</a>
+              <div class="publication-links">
+                <a href="https://openreview.net/pdf?id=AnJGQHrq7m" class="publication-link">Paper</a>
+                <a href="https://github.com/VitamintK/ssl-project" class="publication-link">Code</a>
+              </div>
+            </div>
             <div class="publication-info">
               <h3>Towards Learning Representations of Policies in Two-Player Zero-Sum Games</h3>
-              <p class="publication-authors">Kevin Wang, Kevin Yang, Arjun Prakash, Amy Greenwald</p>
-              <a href="https://sites.google.com/view/nextgame-icml26" class="publication-venue">ICML 2026 NExT-Game Workshop (Spotlight)</a>
-            </div>
-            <div class="publication-links">
-              <a href="https://openreview.net/pdf?id=AnJGQHrq7m" class="publication-link">Paper</a>
-              <a href="https://github.com/VitamintK/ssl-project" class="publication-link">Code</a>
+              <p class="publication-authors">Kevin Wang*, Kevin Yang*, Arjun Prakash, Amy Greenwald</p>
             </div>
           </article>
 
           <article class="publication-row">
+            <a class="publication-media" href="https://arxiv.org/abs/2509.22335">
+              <img src="images/graphics/spectral_collapse.png" alt="Illustration for spectral collapse paper">
+            </a>
+            <div class="publication-meta">
+              <a href="https://icml.cc/" class="publication-venue">ICML 2026</a>
+              <div class="publication-links">
+                <a href="https://arxiv.org/abs/2509.22335" class="publication-link">Paper</a>
+                <a href="https://github.com/KevinGuo27/lop-jax" class="publication-link">Code</a>
+              </div>
+            </div>
             <div class="publication-info">
               <h3>Spectral Collapse Drives Loss of Plasticity in Deep Continual Learning</h3>
               <p class="publication-authors">Arjun Prakash*, Naicheng He*, Kaicheng Guo*, Saket Tiwari, Tyrone Serapio, Ruo Yu Tao, Amy Greenwald, George Konidaris</p>
-              <a href="https://icml.cc/" class="publication-venue">ICML 2026</a>
-            </div>
-            <div class="publication-links">
-              <a href="https://arxiv.org/abs/2509.22335" class="publication-link">Paper</a>
-              <a href="https://github.com/KevinGuo27/lop-jax" class="publication-link">Code</a>
             </div>
           </article>
 
           <article class="publication-row">
+            <a class="publication-media" href="https://arxiv.org/abs/2605.24375">
+              <img src="auction_isometric.jpg" alt="Illustration for lightweight large language models paper">
+            </a>
+            <div class="publication-meta">
+              <a href="https://sites.google.com/view/se-aamas2026" class="publication-venue">AAMAS 2026 Strategic Engineering Workshop</a>
+              <div class="publication-links">
+                <a href="https://arxiv.org/abs/2605.24375" class="publication-link">Paper</a>
+                <a href="https://github.com/tktserapio/internalizing-cwm-sft-grpo" class="publication-link">Code</a>
+              </div>
+            </div>
             <div class="publication-info">
               <h3>Distilling Game Code World Model Generation into Lightweight Large Language Models</h3>
               <p class="publication-authors">Tyrone Serapio, Arjun Prakash, Haoyang Xu, Kevin Wang, Amy Greenwald</p>
-              <a href="https://sites.google.com/view/se-aamas2026" class="publication-venue">AAMAS 2026 Strategic Engineering Workshop</a>
-            </div>
-            <div class="publication-links">
-              <a href="https://arxiv.org/abs/2605.24375" class="publication-link">Paper</a>
-              <a href="https://github.com/tktserapio/internalizing-cwm-sft-grpo" class="publication-link">Code</a>
             </div>
           </article>
 
           <article class="publication-row">
+            <a class="publication-media" href="https://arxiv.org/abs/2505.11714">
+              <img src="images/graphics/hero.png" alt="Illustration for bi-level policy optimization paper">
+            </a>
+            <div class="publication-meta">
+              <a href="https://cyprusconferences.org/aamas2026/" class="publication-venue">AAMAS 2026</a>
+              <div class="publication-links">
+                <a href="https://arxiv.org/abs/2505.11714" class="publication-link">Paper</a>
+                <a href="https://github.com/Arnie-He/BLPO" class="publication-link">Code</a>
+              </div>
+            </div>
             <div class="publication-info">
               <h3>Bi-Level Policy Optimization with Nyström Hypergradients</h3>
               <p class="publication-authors">Arjun Prakash*, Naicheng He*, Denizalp Goktas, Jacob Makar-Limanov, Amy Greenwald</p>
-              <a href="https://cyprusconferences.org/aamas2026/" class="publication-venue">AAMAS 2026</a>
-            </div>
-            <div class="publication-links">
-              <a href="https://arxiv.org/abs/2505.11714" class="publication-link">Paper</a>
-              <a href="https://github.com/Arnie-He/BLPO" class="publication-link">Code</a>
             </div>
           </article>
         </div>
@@ -307,50 +350,204 @@
   </main>
 
   <script>
-    const researchTabsRoot = document.querySelector("[data-research-tabs]");
+    const siteHeader = document.querySelector(".site-header");
+    const heroSection = document.querySelector(".hero");
+    const researchCarousel = document.querySelector("[data-research-carousel]");
+    const heroCanvas = document.getElementById("coordination-field");
+    const fieldLayer = document.querySelector(".field-layer");
 
-    if (researchTabsRoot) {
-      const tabs = Array.from(researchTabsRoot.querySelectorAll("[data-research-target]"));
-      const panels = Array.from(researchTabsRoot.querySelectorAll("[data-research-panel]"));
+    if (siteHeader && heroSection) {
+      const syncHeaderState = () => {
+        const threshold = Math.max(120, heroSection.offsetHeight * 0.45);
+        siteHeader.classList.toggle("is-compact", window.scrollY > threshold);
+      };
 
-      const setActiveResearchTab = (target) => {
-        tabs.forEach((tab) => {
-          const isActive = tab.dataset.researchTarget === target;
-          tab.classList.toggle("is-active", isActive);
-          tab.setAttribute("aria-selected", String(isActive));
-          tab.setAttribute("tabindex", isActive ? "0" : "-1");
-        });
+      syncHeaderState();
+      window.addEventListener("scroll", syncHeaderState, { passive: true });
+      window.addEventListener("resize", syncHeaderState);
+    }
 
-        panels.forEach((panel) => {
-          const isActive = panel.dataset.researchPanel === target;
-          panel.classList.toggle("is-active", isActive);
-          panel.hidden = !isActive;
+    if (researchCarousel) {
+      const track = researchCarousel.querySelector(".research-carousel-track");
+      const slides = Array.from(researchCarousel.querySelectorAll(".research-slide"));
+      const titleItems = Array.from(researchCarousel.querySelectorAll(".research-carousel-titles span"));
+      const prevButton = researchCarousel.querySelector("[data-research-prev]");
+      const nextButton = researchCarousel.querySelector("[data-research-next]");
+      let activeIndex = 0;
+      let autoAdvanceId;
+
+      const renderResearchSlide = () => {
+        track.style.transform = `translateX(-${activeIndex * 100}%)`;
+        titleItems.forEach((item, index) => {
+          item.classList.toggle("is-active", index === activeIndex);
         });
       };
 
-      tabs.forEach((tab, index) => {
-        tab.addEventListener("click", () => {
-          setActiveResearchTab(tab.dataset.researchTarget);
-        });
+      const goToResearchSlide = (nextIndex) => {
+        activeIndex = (nextIndex + slides.length) % slides.length;
+        renderResearchSlide();
+      };
 
-        tab.addEventListener("keydown", (event) => {
-          if (event.key !== "ArrowDown" && event.key !== "ArrowUp" && event.key !== "ArrowRight" && event.key !== "ArrowLeft" && event.key !== "Home" && event.key !== "End") {
-            return;
-          }
+      const startResearchAutoAdvance = () => {
+        window.clearInterval(autoAdvanceId);
+        autoAdvanceId = window.setInterval(() => {
+          goToResearchSlide(activeIndex + 1);
+        }, 4500);
+      };
 
-          event.preventDefault();
-
-          let nextIndex = index;
-
-          if (event.key === "Home") nextIndex = 0;
-          if (event.key === "End") nextIndex = tabs.length - 1;
-          if (event.key === "ArrowDown" || event.key === "ArrowRight") nextIndex = (index + 1) % tabs.length;
-          if (event.key === "ArrowUp" || event.key === "ArrowLeft") nextIndex = (index - 1 + tabs.length) % tabs.length;
-
-          tabs[nextIndex].focus();
-          setActiveResearchTab(tabs[nextIndex].dataset.researchTarget);
-        });
+      prevButton?.addEventListener("click", () => {
+        goToResearchSlide(activeIndex - 1);
+        startResearchAutoAdvance();
       });
+
+      nextButton?.addEventListener("click", () => {
+        goToResearchSlide(activeIndex + 1);
+        startResearchAutoAdvance();
+      });
+
+      researchCarousel.addEventListener("mouseenter", () => window.clearInterval(autoAdvanceId));
+      researchCarousel.addEventListener("mouseleave", startResearchAutoAdvance);
+
+      renderResearchSlide();
+      startResearchAutoAdvance();
+    }
+
+    if (heroCanvas && fieldLayer) {
+      const ctx = heroCanvas.getContext("2d");
+      const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+      const GRID_X = 34;
+      const GRID_Y = 24;
+      const TAU = Math.PI * 2;
+      let width = 0;
+      let height = 0;
+      let dpr = 1;
+      let startedAt = performance.now();
+      let raf = 0;
+
+      const resizeField = () => {
+        const rect = fieldLayer.getBoundingClientRect();
+        dpr = Math.min(window.devicePixelRatio || 1, 2);
+        width = Math.max(1, Math.floor(rect.width));
+        height = Math.max(1, Math.floor(rect.height));
+        heroCanvas.width = Math.floor(width * dpr);
+        heroCanvas.height = Math.floor(height * dpr);
+        heroCanvas.style.width = `${width}px`;
+        heroCanvas.style.height = `${height}px`;
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      };
+
+      const gaussian = (px, py, cx, cy, sigma) => {
+        const dx = px - cx;
+        const dy = py - cy;
+        return Math.exp(-(dx * dx + dy * dy) / (2 * sigma * sigma));
+      };
+
+      const renderField = (now) => {
+        const t = reduceMotion.matches ? 4.8 : (now - startedAt) / 1000;
+        ctx.clearRect(0, 0, width, height);
+
+        const insetX = Math.max(42, width * 0.075);
+        const insetY = Math.max(32, height * 0.11);
+        const usableW = width - insetX * 2;
+        const usableH = height - insetY * 2;
+        const spacingX = usableW / (GRID_X - 1);
+        const spacingY = usableH / (GRID_Y - 1);
+        const scale = Math.min(width, height);
+        const movers = [
+          {
+            x: width * (0.58 + 0.14 * Math.cos(t * 0.42)),
+            y: height * (0.28 + 0.12 * Math.sin(t * 0.54 + 0.7)),
+            sigma: scale * 0.17,
+            strength: 1,
+            phase: 0
+          },
+          {
+            x: width * (0.72 + 0.12 * Math.sin(t * 0.37 + 1.8)),
+            y: height * (0.58 + 0.14 * Math.cos(t * 0.41 + 0.2)),
+            sigma: scale * 0.19,
+            strength: 0.92,
+            phase: 1.7
+          },
+          {
+            x: width * (0.48 + 0.16 * Math.cos(t * 0.31 + 2.4)),
+            y: height * (0.74 + 0.1 * Math.sin(t * 0.47 + 1.5)),
+            sigma: scale * 0.16,
+            strength: 0.82,
+            phase: 2.8
+          }
+        ];
+
+        for (let gy = 0; gy < GRID_Y; gy += 1) {
+          for (let gx = 0; gx < GRID_X; gx += 1) {
+            const x = insetX + gx * spacingX;
+            const y = insetY + gy * spacingY;
+            const localPhase = Math.sin(gx * 1.73 + gy * 1.19);
+            const drift = 0.5 + 0.5 * Math.sin(t * 0.9 + gx * 0.24 - gy * 0.18 + localPhase * 0.5);
+
+            let influence = 0;
+            let warmness = 0;
+            for (const mover of movers) {
+              const g = gaussian(x, y, mover.x, mover.y, mover.sigma) * mover.strength;
+              influence += g;
+              warmness += g * (0.55 + 0.45 * Math.sin(t * 1.15 + mover.phase + gx * 0.04 + gy * 0.03));
+            }
+
+            const wave = Math.max(0, Math.sin(gx * 0.42 + gy * 0.34 - t * 1.8 + localPhase)) * 0.12;
+            const attention = Math.min(1, influence * 0.74 + drift * 0.08 + wave);
+            const alpha = Math.min(0.74, 0.09 + attention * 0.48 + (localPhase + 1) * 0.012);
+            const activationBoost = attention > 0.52 ? (attention - 0.52) * 2.4 : 0;
+            const radius = 0.8 + attention * 1.75 + activationBoost;
+            const warm = Math.max(0, warmness * 0.48 - 0.16);
+            const isWarm = warm > 0.035;
+
+            ctx.beginPath();
+            ctx.arc(x, y, radius, 0, TAU);
+            ctx.fillStyle = isWarm
+              ? `rgba(233, 105, 49, ${Math.min(0.62, alpha * (0.34 + warm))})`
+              : `rgba(34, 33, 30, ${alpha})`;
+            ctx.fill();
+
+            if (attention > 0.52) {
+              ctx.save();
+              ctx.globalAlpha = Math.min(0.24, attention * 0.25);
+              ctx.shadowBlur = 8 + attention * 10;
+              ctx.shadowColor = isWarm ? "rgba(233,105,49,0.34)" : "rgba(21,21,21,0.12)";
+              ctx.beginPath();
+              ctx.arc(x, y, Math.max(radius * 0.82, 0.9), 0, TAU);
+              ctx.fillStyle = isWarm ? "rgba(233,105,49,0.46)" : "rgba(34,33,30,0.42)";
+              ctx.fill();
+              ctx.restore();
+            }
+          }
+        }
+
+        if (!reduceMotion.matches) {
+          raf = window.requestAnimationFrame(renderField);
+        }
+      };
+
+      const restartField = () => {
+        window.cancelAnimationFrame(raf);
+        if (reduceMotion.matches) {
+          renderField(performance.now());
+        } else {
+          raf = window.requestAnimationFrame(renderField);
+        }
+      };
+
+      const observer = new ResizeObserver(() => {
+        resizeField();
+        if (reduceMotion.matches) {
+          renderField(performance.now());
+        }
+      });
+
+      observer.observe(fieldLayer);
+      window.addEventListener("resize", resizeField);
+      reduceMotion.addEventListener?.("change", restartField);
+
+      resizeField();
+      restartField();
     }
   </script>
 </body>
