@@ -21,8 +21,8 @@
         <span>GLAMOUR GROUP</span>
       </a>
       <nav class="main-nav" aria-label="Primary">
-        <a href="#blog">BLOG</a>
         <a href="#mission">RESEARCH</a>
+        <a href="#blog">BLOG</a>
         <a href="#people">PEOPLE</a>
         <a href="#publications">PUBLICATIONS</a>
       </nav>
@@ -64,25 +64,23 @@
           </div>
         </div>
 
-        <div class="research-carousel" data-research-carousel>
-          <div class="research-carousel-viewport">
-            <button class="research-carousel-arrow research-carousel-arrow-left" type="button" aria-label="Previous research area" data-research-prev>
-              <span aria-hidden="true">&#8249;</span>
-            </button>
-            <div class="research-carousel-track">
+        <div class="research-grid" aria-label="Research areas">
               <article class="research-slide">
                 <div class="research-slide-media">
                   <img src="images/graphics/two_people.png" alt="Abstract market diagram representing multiagent learning">
                 </div>
                 <div class="research-slide-copy">
                   <h3>Multiagent Learning</h3>
-                  <p>
-                    In multiagent systems, each agent's best strategy depends on what the other agents are doing. We study whether simultaneous learning can converge to stable game-theoretic behavior and when it can produce cooperative, socially desirable outcomes.
-                  </p>
-                  <ul class="research-slide-points">
-                    <li>Convergence to equilibria in repeated interaction</li>
-                    <li>Cooperation and incentive alignment across agents</li>
-                  </ul>
+                  <details class="research-read-more">
+                    <summary>Read more</summary>
+                    <p>
+                      In multiagent systems, each agent's best strategy depends on what the other agents are doing. We study whether simultaneous learning can converge to stable game-theoretic behavior and when it can produce cooperative, socially desirable outcomes.
+                    </p>
+                    <ul class="research-slide-points">
+                      <li>Convergence to equilibria in repeated interaction</li>
+                      <li>Cooperation and incentive alignment across agents</li>
+                    </ul>
+                  </details>
                 </div>
               </article>
 
@@ -92,13 +90,16 @@
                 </div>
                 <div class="research-slide-copy">
                   <h3>Algorithmic Game Theory</h3>
-                  <p>
-                    We analyze the structure of strategic interaction and ask when equilibria can be computed efficiently. This connects directly to the design of online auctions, marketplaces, and autonomous bidding, trading, and negotiating agents.
-                  </p>
-                  <ul class="research-slide-points">
-                    <li>Efficient equilibrium computation</li>
-                    <li>Long-run behavior of strategic learning agents</li>
-                  </ul>
+                  <details class="research-read-more">
+                    <summary>Read more</summary>
+                    <p>
+                      We analyze the structure of strategic interaction and ask when equilibria can be computed efficiently. This connects directly to the design of online auctions, marketplaces, and autonomous bidding, trading, and negotiating agents.
+                    </p>
+                    <ul class="research-slide-points">
+                      <li>Efficient equilibrium computation</li>
+                      <li>Long-run behavior of strategic learning agents</li>
+                    </ul>
+                  </details>
                 </div>
               </article>
 
@@ -108,20 +109,18 @@
                 </div>
                 <div class="research-slide-copy">
                   <h3>Strategic LLMs</h3>
-                  <p>
-                    Language models are still unreliable at strategic decision-making, even in settings that look simple on paper. We build agent harnesses and evaluation environments that help LLM-based agents reason, coordinate, and act effectively in multiagent worlds.
-                  </p>
-                  <ul class="research-slide-points">
-                    <li>Strategic reasoning with language-model agents</li>
-                    <li>Evaluation environments for coordination and negotiation</li>
-                  </ul>
+                  <details class="research-read-more">
+                    <summary>Read more</summary>
+                    <p>
+                      Language models are still unreliable at strategic decision-making, even in settings that look simple on paper. We build agent harnesses and evaluation environments that help LLM-based agents reason, coordinate, and act effectively in multiagent worlds.
+                    </p>
+                    <ul class="research-slide-points">
+                      <li>Strategic reasoning with language-model agents</li>
+                      <li>Evaluation environments for coordination and negotiation</li>
+                    </ul>
+                  </details>
                 </div>
               </article>
-            </div>
-            <button class="research-carousel-arrow research-carousel-arrow-right" type="button" aria-label="Next research area" data-research-next>
-              <span aria-hidden="true">&#8250;</span>
-            </button>
-          </div>
         </div>
       </div>
     </section>
@@ -135,19 +134,7 @@
           </div>
         </div>
 
-        <div class="blog-list" aria-label="Blog posts">
-          <article class="blog-card">
-            <a class="blog-card-media" href="#">
-              <img src="images/graphics/ttt_value_func.jpeg" alt="Illustration for policy representations in two-player zero-sum games">
-            </a>
-            <div class="blog-card-panel">
-              <p class="blog-date">May 2026</p>
-              <h3>
-                <a href="#">Do LLMs have good value functions?</a>
-              </h3>
-              <p class="blog-summary">An exploration of the value functions of large language models through probing.</p>
-            </div>
-          </article>
+        Coming soon!
 
           <!-- <article class="blog-card">
             <a class="blog-card-media" href="https://arxiv.org/abs/2509.22335">
@@ -289,7 +276,7 @@
 
           <article class="publication-row">
             <a class="publication-media" href="https://arxiv.org/abs/2605.24375">
-              <img src="images/graphics/llm.png" alt="Illustration for lightweight large language models paper">
+              <img src="images/graphics/distilling.png" alt="Illustration for lightweight large language models paper">
             </a>
             <div class="publication-meta">
               <a href="https://sites.google.com/view/se-aamas2026" class="publication-venue">AAMAS 2026 Strategic Engineering Workshop</a>
@@ -328,7 +315,6 @@
   <script>
     const siteHeader = document.querySelector(".site-header");
     const heroSection = document.querySelector(".hero");
-    const researchCarousel = document.querySelector("[data-research-carousel]");
     const heroCanvas = document.getElementById("coordination-field");
     const fieldLayer = document.querySelector(".field-layer");
     if (siteHeader && heroSection) {
@@ -340,47 +326,6 @@
       syncHeaderState();
       window.addEventListener("scroll", syncHeaderState, { passive: true });
       window.addEventListener("resize", syncHeaderState);
-    }
-
-    if (researchCarousel) {
-      const track = researchCarousel.querySelector(".research-carousel-track");
-      const slides = Array.from(researchCarousel.querySelectorAll(".research-slide"));
-      const prevButton = researchCarousel.querySelector("[data-research-prev]");
-      const nextButton = researchCarousel.querySelector("[data-research-next]");
-      let activeIndex = 0;
-      let autoAdvanceId;
-
-      const renderResearchSlide = () => {
-        track.style.transform = `translateX(-${activeIndex * 100}%)`;
-      };
-
-      const goToResearchSlide = (nextIndex) => {
-        activeIndex = (nextIndex + slides.length) % slides.length;
-        renderResearchSlide();
-      };
-
-      const startResearchAutoAdvance = () => {
-        window.clearInterval(autoAdvanceId);
-        autoAdvanceId = window.setInterval(() => {
-          goToResearchSlide(activeIndex + 1);
-        }, 4500);
-      };
-
-      prevButton?.addEventListener("click", () => {
-        goToResearchSlide(activeIndex - 1);
-        startResearchAutoAdvance();
-      });
-
-      nextButton?.addEventListener("click", () => {
-        goToResearchSlide(activeIndex + 1);
-        startResearchAutoAdvance();
-      });
-
-      researchCarousel.addEventListener("mouseenter", () => window.clearInterval(autoAdvanceId));
-      researchCarousel.addEventListener("mouseleave", startResearchAutoAdvance);
-
-      renderResearchSlide();
-      startResearchAutoAdvance();
     }
 
     if (heroCanvas && fieldLayer) {
