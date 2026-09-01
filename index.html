@@ -22,7 +22,6 @@
       </a>
       <nav class="main-nav" aria-label="Primary">
         <a href="#mission">RESEARCH</a>
-        <a href="#blog">BLOG</a>
         <a href="#people">PEOPLE</a>
         <a href="#publications">PUBLICATIONS</a>
       </nav>
@@ -39,7 +38,9 @@
 
       <div class="container hero-grid">
         <div class="hero-copy">
-          <h1 class="hero-title">GLAMOUR Group<span class="accent-burgundy"></span></h1>
+          <p class="hero-tagline">
+            Designing agents for multiagent environments and understanding the dynamics they create.
+          </p>
         </div>
         <div class="hero-figure" aria-hidden="true">
           <img src="images/graphics/two_people.png" alt="">
@@ -51,7 +52,7 @@
       <div class="container">
         <div class="mission-intro">
           <div class="mission-label">
-            <p class="section-label">Our Research</p>
+            <p class="section-label">Research Areas</p>
           </div>
           <div class="mission-copy">
             <h2>
@@ -67,39 +68,34 @@
         <div class="research-grid" aria-label="Research areas">
               <article class="research-slide">
                 <div class="research-slide-media">
-                  <img src="images/graphics/two_people.png" alt="Abstract market diagram representing multiagent learning">
+                  <img src="images/graphics/multiagent.png" alt="Abstract market diagram representing multiagent learning">
                 </div>
                 <div class="research-slide-copy">
                   <h3>Multiagent Learning</h3>
-                  <details class="research-read-more">
-                    <summary>Read more</summary>
-                    <p>
-                      In multiagent systems, each agent's best strategy depends on what the other agents are doing. We study whether simultaneous learning can converge to stable game-theoretic behavior and when it can produce cooperative, socially desirable outcomes.
-                    </p>
-                    <ul class="research-slide-points">
-                      <li>Convergence to equilibria in repeated interaction</li>
-                      <li>Cooperation and incentive alignment across agents</li>
-                    </ul>
-                  </details>
+                  <p>
+                    In multiagent systems, the challenge is that each agent's best strategy depends on what the other agents are doing. When multiple agents are learning at the same time, some key questions include:
+                  </p>
+                  <ul class="research-slide-points">
+                    <li>Will learning converge to stable behavior, such as game-theoretic equilibria?</li>
+                    <li>Can agents learn to cooperate and arrive at socially-desirable outcomes?</li>
+                  </ul>
                 </div>
               </article>
 
               <article class="research-slide">
                 <div class="research-slide-media">
-                  <img src="images/graphics/auction_cropped.png" alt="Isometric auction scene representing algorithmic game theory">
+                  <img src="images/graphics/auction_icon.png" alt="Isometric auction scene representing algorithmic game theory">
                 </div>
                 <div class="research-slide-copy">
                   <h3>Algorithmic Game Theory</h3>
-                  <details class="research-read-more">
-                    <summary>Read more</summary>
-                    <p>
-                      We analyze the structure of strategic interaction and ask when equilibria can be computed efficiently. This connects directly to the design of online auctions, marketplaces, and autonomous bidding, trading, and negotiating agents.
-                    </p>
-                    <ul class="research-slide-points">
-                      <li>Efficient equilibrium computation</li>
-                      <li>Long-run behavior of strategic learning agents</li>
-                    </ul>
-                  </details>
+                  <p>
+                    We analyze how AI and algorithmic thinking can be used to improve social outcomes in multiagent systems, while taking account of individual agent’s incentives.
+                    Concretely, this looks like designing online auctions, marketplaces, and autonomous bidding and negotiating agents. Key questions include:
+                  </p>
+                  <ul class="research-slide-points">
+                    <li>Can equilibria be computed efficiently?</li>
+                    <li>How can we explain the long-run behavior of multiple strategic learning agents?</li>
+                  </ul>
                 </div>
               </article>
 
@@ -109,124 +105,159 @@
                 </div>
                 <div class="research-slide-copy">
                   <h3>Strategic LLMs</h3>
-                  <details class="research-read-more">
-                    <summary>Read more</summary>
-                    <p>
-                      Language models are still unreliable at strategic decision-making, even in settings that look simple on paper. We build agent harnesses and evaluation environments that help LLM-based agents reason, coordinate, and act effectively in multiagent worlds.
-                    </p>
-                    <ul class="research-slide-points">
-                      <li>Strategic reasoning with language-model agents</li>
-                      <li>Evaluation environments for coordination and negotiation</li>
-                    </ul>
-                  </details>
+                  <p>
+                    We aim to use LLMs for strategic decision making in multiagent environments. 
+                    LLMs have been reported to be notoriously bad at strategic decision making. 
+                    For example, they cannot play the game of Tic-Tac-Toe, even though its solution is a part of their training data. 
+                    We are endeavoring to build agent harnesses that guide LLM agents in multiagent settings.
+                  </p>
                 </div>
               </article>
         </div>
       </div>
     </section>
 
-    <section class="blog-section" id="blog">
+    <section class="blog-section latest-section" id="latest">
       <div class="container">
         <div class="blog-header">
           <div class="section-heading">
-            <p class="section-label">Blog</p>
-            <h2>Notes, essays, and lab updates</h2>
+            <h2>Latest Research</h2>
           </div>
         </div>
 
-        Coming soon!
-
-          <!-- <article class="blog-card">
-            <a class="blog-card-media" href="https://arxiv.org/abs/2509.22335">
-              <img src="images/graphics/spectral_collapse.png" alt="Abstract graphic for spectral collapse in continual learning">
+        <div class="latest-list">
+          <article class="latest-row">
+            <a class="latest-media" href="https://openreview.net/pdf?id=AnJGQHrq7m">
+              <img src="images/graphics/policy_tpzs.png" alt="Illustration for two-player zero-sum games paper">
             </a>
-            <div class="blog-card-panel">
-              <p class="blog-date">April 2026</p>
-              <h3>
-                <a href="https://arxiv.org/abs/2509.22335">Spectral Collapse Drives Loss of Plasticity in Deep Continual Learning</a>
-              </h3>
-              <p class="blog-summary">An essay on continual learning, plasticity loss, and what spectral collapse seems to reveal about the limits of standard deep learning dynamics.</p>
+            <div class="latest-copy">
+              <p class="latest-venue">ICML 2026 NExT-Game Workshop · Spotlight</p>
+              <h3><a href="https://openreview.net/pdf?id=AnJGQHrq7m">Towards Learning Representations of Policies in Two-Player Zero-Sum Games</a></h3>
+              <p class="latest-summary">Learning useful representations of policies for strategic interaction in two-player zero-sum games.</p>
+              <div class="latest-links">
+                <a href="https://arxiv.org/abs/2607.01498">Paper</a>
+                <a href="https://github.com/VitamintK/ssl-project">Code</a>
+              </div>
             </div>
           </article>
 
-          <article class="blog-card">
-            <a class="blog-card-media" href="https://arxiv.org/abs/2605.24375">
-              <img src="images/graphics/auction.png" alt="Abstract market illustration for a distillation workshop update">
+          <article class="latest-row">
+            <a class="latest-media" href="https://arxiv.org/abs/2509.22335">
+              <img src="images/graphics/spectral_collapse.png" alt="Abstract graphic for spectral collapse in continual learning">
             </a>
-            <div class="blog-card-panel">
-              <p class="blog-date">March 2026</p>
-              <h3>
-                <a href="https://arxiv.org/abs/2605.24375">Distilling Game Code World Model Generation into Lightweight LLMs</a>
-              </h3>
-              <p class="blog-summary">A lab update on distillation, compact strategic models, and the gap between large-model capability and deployable agents.</p>
+            <div class="latest-copy">
+              <p class="latest-venue">ICML 2026</p>
+              <h3><a href="https://arxiv.org/abs/2509.22335">Spectral Collapse Drives Loss of Plasticity in Deep Continual Learning</a></h3>
+              <p class="latest-summary">We investigate why deep neural networks suffer from loss of plasticity in continual learning, and thus fail to learn new tasks without reinitializing parameters.</p>
+              <div class="latest-links">
+                <a href="https://arxiv.org/abs/2509.22335">Paper</a>
+                <a href="https://github.com/KevinGuo27/lop-jax">Code</a>
+              </div>
             </div>
-          </article> -->
+          </article>
+
+          <article class="latest-row">
+            <a class="latest-media" href="https://arxiv.org/abs/2605.24375">
+              <img src="images/graphics/distilling.png" alt="Illustration for lightweight large language models paper">
+            </a>
+            <div class="latest-copy">
+              <p class="latest-venue">AAMAS 2026 Strategic Engineering Workshop</p>
+              <h3><a href="https://arxiv.org/abs/2605.24375">Distilling Game Code World Model Generation into Lightweight Large Language Models</a></h3>
+              <p class="latest-summary">Distilling strategic world-model generation into smaller language models for more efficient game-playing agents.</p>
+              <div class="latest-links">
+                <a href="https://arxiv.org/abs/2605.24375">Paper</a>
+                <a href="https://github.com/tktserapio/internalizing-cwm-sft-grpo">Code</a>
+              </div>
+            </div>
+          </article>
         </div>
+
+        <a class="latest-view-all" href="#publications">View all publications <span aria-hidden="true">→</span></a>
       </div>
     </section>
 
     <section class="people-section" id="people">
       <div class="container">
         <div class="section-heading research-heading">
-          <p class="section-label">PEOPLE</p>
-          <h2>Meet the Team</h2>
+          <h2>People</h2>
         </div>
 
-        <div class="people-grid">
-          <article class="profile-card">
-            <div class="profile-image" style="background: #d9b8a3;"></div>
-            <h3>Amy Greenwald</h3>
-            <p class="profile-role">Faculty</p>
-          </article>
+        <div class="people-group people-group-faculty">
+          <h3 class="people-group-title">Faculty</h3>
+          <div class="people-grid">
+            <article class="profile-card">
+              <div class="profile-image" style="background: #d9b8a3;"></div>
+              <h3>Amy Greenwald</h3>
+            </article>
+          </div>
+        </div>
 
-          <article class="profile-card">
-            <div class="profile-image" style="background: #a8c5d1;"><img src="images/people/arjun.jpg" alt="Arjun Prakash"></div>
-            <h3>Arjun Prakash</h3>
-            <p class="profile-role">PhD Student</p>
-          </article>
+        <div class="people-group">
+          <h3 class="people-group-title">PhD &amp; Masters Students</h3>
+          <div class="people-grid">
+            <article class="profile-card">
+              <div class="profile-image" style="background: #b8a89e;"></div>
+              <h3>Klara Chura</h3>
+              <p class="profile-role">PhD</p>
+            </article>
 
-          <article class="profile-card">
-            <div class="profile-image" style="background: #c9a87d;"></div>
-            <h3>Kevin Wang</h3>
-            <p class="profile-role">PhD Student</p>
-          </article>
+            <article class="profile-card">
+              <div class="profile-image" style="background: #d6c2a8;"></div>
+              <h3>Emin Alp Güneri</h3>
+              <p class="profile-role">Master's</p>
+            </article>
 
-          <article class="profile-card">
-            <div class="profile-image" style="background: #b8a89e;"></div>
-            <h3>Klara Chura</h3>
-            <p class="profile-role">PhD Student</p>
-          </article>
+            <article class="profile-card">
+              <div class="profile-image" style="background: #d4a5a5;"></div>
+              <h3>Hrithik Nambiar</h3>
+              <p class="profile-role">PhD</p>
+            </article>
+            
+            <article class="profile-card">
+              <div class="profile-image" style="background: #a8c5d1;"><img src="images/people/arjun.jpg" alt="Arjun Prakash"></div>
+              <h3>Arjun Prakash</h3>
+              <p class="profile-role">PhD</p>
+            </article>
 
-          <article class="profile-card">
-            <div class="profile-image" style="background: #d4a5a5;"></div>
-            <h3>Hrithik Nambiar</h3>
-            <p class="profile-role">PhD Student</p>
-          </article>
+            <article class="profile-card">
+              <div class="profile-image" style="background: #c9a87d;"></div>
+              <h3>Kevin Wang</h3>
+              <p class="profile-role">PhD</p>
+            </article>
+          </div>
+        </div>
 
-          <article class="profile-card">
-            <div class="profile-image" style="background: #d6c2a8;"></div>
-            <h3>Emin Alp Güneri</h3>
-            <p class="profile-role">Masters</p>
-          </article>
+        <div class="people-group">
+          <h3 class="people-group-title">Undergraduates</h3>
+          <div class="people-grid">
+            <article class="profile-card">
+              <div class="profile-image" style="background: #d1b8a8;"><img src="images/people/tyrone.png" alt="Tyrone Serapio"></div>
+              <h3>Tyrone Serapio</h3>
+            </article>
 
-          <article class="profile-card">
-            <div class="profile-image" style="background: #d1b8a8;"></div>
-            <h3>Tyrone Serapio</h3>
-            <p class="profile-role">Undergrad '28</p>
-          </article>
+            <article class="profile-card">
+              <div class="profile-image" style="background: #a8c2d1;"></div>
+              <h3>Haoyang Xu</h3>
+            </article>
 
-          <article class="profile-card">
-            <div class="profile-image" style="background: #a8c2d1;"></div>
-            <h3>Haoyang Xu</h3>
-            <p class="profile-role">Undergrad '28</p>
-          </article>
+            <article class="profile-card">
+              <div class="profile-image" style="background: #b8c4d8;"></div>
+              <h3>Luke Zhang</h3>
+            </article>
+          </div>
+        </div>
 
-          <article class="profile-card">
-            <div class="profile-image" style="background: #b8c4d8;"></div>
-            <h3>Luke Zhang</h3>
-            <p class="profile-role">Undergrad '28</p>
-          </article>
+        <div class="people-group">
+          <h3 class="people-group-title">Alumni</h3>
+          <div class="people-grid">
+            
+            <article class="profile-card">
+              <div class="profile-image" style="background: #d1b8a8;"></div>
+              <h3>Naicheng He</h3>
+              <p class="profile-role">Next: PhD @ Princeton</p>
+            </article>
 
+          </div>
         </div>
       </div>
     </section>
@@ -234,33 +265,34 @@
     <section class="publications-section" id="publications">
       <div class="container">
         <div class="section-heading">
-          <p class="section-label">Publications</p>
-          <h2>Recent Publications</h2>
+          <h2>Publications</h2>
         </div>
 
-        <div class="publications-list">
-
+        <div class="publication-year-group">
+          <div class="publications-carousel" data-publications-carousel>
+            <div class="publications-carousel-viewport">
+              <div class="publications-carousel-track">
+                <div class="publications-carousel-page">
+                  <div class="publications-list">
           <article class="publication-row">
-            <a class="publication-media" href="https://openreview.net/pdf?id=AnJGQHrq7m">
-              <img src="images/graphics/policy_tpzs.png" alt="Illustration for two-player zero-sum games paper">
-            </a>
-            <div class="publication-meta">
-              <a href="https://sites.google.com/view/nextgame-icml26" class="publication-venue">ICML 2026 NExT-Game Workshop (Spotlight)</a>
-              <div class="publication-links">
-                <a href="https://openreview.net/pdf?id=AnJGQHrq7m" class="publication-link">Paper</a>
-                <a href="https://github.com/VitamintK/ssl-project" class="publication-link">Code</a>
-              </div>
-            </div>
             <div class="publication-info">
               <h3>Towards Learning Representations of Policies in Two-Player Zero-Sum Games</h3>
               <p class="publication-authors">Kevin Wang*, Kevin Yang*, Arjun Prakash, Amy Greenwald</p>
             </div>
+            <div class="publication-meta">
+              <a href="https://sites.google.com/view/nextgame-icml26" class="publication-venue">ICML 2026 NExT-Game Workshop · Spotlight</a>
+              <div class="publication-links">
+                <a href="https://arxiv.org/abs/2607.01498" class="publication-link">Paper</a>
+                <a href="https://github.com/VitamintK/ssl-project" class="publication-link">Code</a>
+              </div>
+            </div>
           </article>
 
           <article class="publication-row">
-            <a class="publication-media" href="https://arxiv.org/abs/2509.22335">
-              <img src="images/graphics/spectral_collapse.png" alt="Illustration for spectral collapse paper">
-            </a>
+            <div class="publication-info">
+              <h3>Spectral Collapse Drives Loss of Plasticity in Deep Continual Learning</h3>
+              <p class="publication-authors">Arjun Prakash*, Naicheng He*, Kaicheng Guo*, Saket Tiwari, Tyrone Serapio, Ruo Yu Tao, Amy Greenwald, George Konidaris</p>
+            </div>
             <div class="publication-meta">
               <a href="https://icml.cc/" class="publication-venue">ICML 2026</a>
               <div class="publication-links">
@@ -268,16 +300,13 @@
                 <a href="https://github.com/KevinGuo27/lop-jax" class="publication-link">Code</a>
               </div>
             </div>
-            <div class="publication-info">
-              <h3>Spectral Collapse Drives Loss of Plasticity in Deep Continual Learning</h3>
-              <p class="publication-authors">Arjun Prakash*, Naicheng He*, Kaicheng Guo*, Saket Tiwari, Tyrone Serapio, Ruo Yu Tao, Amy Greenwald, George Konidaris</p>
-            </div>
           </article>
 
           <article class="publication-row">
-            <a class="publication-media" href="https://arxiv.org/abs/2605.24375">
-              <img src="images/graphics/distilling.png" alt="Illustration for lightweight large language models paper">
-            </a>
+            <div class="publication-info">
+              <h3>Distilling Game Code World Model Generation into Lightweight Large Language Models</h3>
+              <p class="publication-authors">Tyrone Serapio, Arjun Prakash, Haoyang Xu, Kevin Wang, Amy Greenwald</p>
+            </div>
             <div class="publication-meta">
               <a href="https://sites.google.com/view/se-aamas2026" class="publication-venue">AAMAS 2026 Strategic Engineering Workshop</a>
               <div class="publication-links">
@@ -285,16 +314,17 @@
                 <a href="https://github.com/tktserapio/internalizing-cwm-sft-grpo" class="publication-link">Code</a>
               </div>
             </div>
-            <div class="publication-info">
-              <h3>Distilling Game Code World Model Generation into Lightweight Large Language Models</h3>
-              <p class="publication-authors">Tyrone Serapio, Arjun Prakash, Haoyang Xu, Kevin Wang, Amy Greenwald</p>
-            </div>
           </article>
+                  </div>
+                </div>
+                <div class="publications-carousel-page">
+                  <div class="publications-list">
 
           <article class="publication-row">
-            <a class="publication-media" href="https://arxiv.org/abs/2505.11714">
-              <img src="images/graphics/bilevel.png" alt="Illustration for bi-level policy optimization paper">
-            </a>
+            <div class="publication-info">
+              <h3>Bi-Level Policy Optimization with Nyström Hypergradients</h3>
+              <p class="publication-authors">Arjun Prakash*, Naicheng He*, Denizalp Goktas, Jacob Makar-Limanov, Amy Greenwald</p>
+            </div>
             <div class="publication-meta">
               <a href="https://cyprusconferences.org/aamas2026/" class="publication-venue">AAMAS 2026</a>
               <div class="publication-links">
@@ -302,21 +332,71 @@
                 <a href="https://github.com/Arnie-He/BLPO" class="publication-link">Code</a>
               </div>
             </div>
+          </article>
+          <article class="publication-row">
             <div class="publication-info">
-              <h3>Bi-Level Policy Optimization with Nyström Hypergradients</h3>
-              <p class="publication-authors">Arjun Prakash*, Naicheng He*, Denizalp Goktas, Jacob Makar-Limanov, Amy Greenwald</p>
+              <h3>Dynamic Thinker: Optimizing Decision-Time Planning with Costly Compute</h3>
+              <p class="publication-authors">Kevin Wang, Jerry Xia, Stephen Chung, Amy Greenwald</p>
+            </div>
+            <div class="publication-meta">
+              <a href="https://ala-workshop.github.io/" class="publication-venue">AAMAS 2025 Adaptive and Learning Agents Workshop</a>
+              <div class="publication-links">
+                <a href="https://openreview.net/pdf?id=yGglBJ1pjZ" class="publication-link">Paper</a>
+                <a href="https://github.com/Alp-Guneri/extratatonnement" class="publication-link">Code</a>
+              </div>
             </div>
           </article>
+
+          <article class="publication-row">
+            <div class="publication-info">
+              <h3>Tractable General Equilibrium</h3>
+              <p class="publication-authors">Denizalp Goktas, Klara Chura, Emin Alp Güneri, Amy Greenwald</p>
+            </div>
+            <div class="publication-meta">
+              <a href="https://arxiv.org/abs/2502.11449" class="publication-venue">Preprint</a>
+              <div class="publication-links">
+                <a href="https://arxiv.org/abs/2502.11449" class="publication-link">Paper</a>
+                <a href="https://github.com/Alp-Guneri/extratatonnement" class="publication-link">Code</a>
+              </div>
+            </div>
+          </article>
+                  </div>
+                </div>
+            </div>
+          </div>
+            <div class="publications-carousel-controls">
+              <button class="publications-carousel-arrow publications-carousel-arrow-left" type="button" aria-label="Previous publications" data-publications-prev>
+                <span aria-hidden="true">&#8249;</span>
+              </button>
+              <button class="publications-carousel-arrow publications-carousel-arrow-right" type="button" aria-label="Next publications" data-publications-next>
+                <span aria-hidden="true">&#8250;</span>
+              </button>
+            </div>
+          </div>
         </div>
+
       </div>
     </section>
+
   </main>
+
+  <section class="join-footer" id="join">
+    <div class="container join-footer-inner">
+      <div class="join-footer-copy">
+        <h2>Interested in joining the GLAMOUR Group?</h2>
+        <p>
+          Email klara_chura@brown.edu to join the mailing list and reading group.
+        </p>
+      </div>
+    </div>
+  </section>
 
   <script>
     const siteHeader = document.querySelector(".site-header");
     const heroSection = document.querySelector(".hero");
     const heroCanvas = document.getElementById("coordination-field");
     const fieldLayer = document.querySelector(".field-layer");
+    const publicationsCarousel = document.querySelector("[data-publications-carousel]");
     if (siteHeader && heroSection) {
       const syncHeaderState = () => {
         const threshold = Math.max(120, heroSection.offsetHeight * 0.45);
@@ -326,6 +406,32 @@
       syncHeaderState();
       window.addEventListener("scroll", syncHeaderState, { passive: true });
       window.addEventListener("resize", syncHeaderState);
+    }
+
+    if (publicationsCarousel) {
+      const track = publicationsCarousel.querySelector(".publications-carousel-track");
+      const pages = Array.from(publicationsCarousel.querySelectorAll(".publications-carousel-page"));
+      const previousButton = publicationsCarousel.querySelector("[data-publications-prev]");
+      const nextButton = publicationsCarousel.querySelector("[data-publications-next]");
+      let activePage = 0;
+
+      const renderPublications = () => {
+        track.style.transform = `translateX(-${activePage * 100}%)`;
+        previousButton.disabled = activePage === 0;
+        nextButton.disabled = activePage === pages.length - 1;
+      };
+
+      previousButton.addEventListener("click", () => {
+        activePage -= 1;
+        renderPublications();
+      });
+
+      nextButton.addEventListener("click", () => {
+        activePage += 1;
+        renderPublications();
+      });
+
+      renderPublications();
     }
 
     if (heroCanvas && fieldLayer) {
