@@ -378,6 +378,7 @@ button {
   font-size: clamp(1.5rem, 2.8vw, 2.4rem);
   line-height: 1.2;
   font-weight: 500;
+  padding-bottom: 1rem;
 }
 
 .eyebrow,
@@ -1357,6 +1358,7 @@ h2 {
   .hero-tagline {
     max-width: 30rem;
   }
+
 
   .mission-section {
     padding-top: 2.5rem;
