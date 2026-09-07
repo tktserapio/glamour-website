@@ -381,6 +381,21 @@ button {
   padding-bottom: 1rem;
 }
 
+.hero-copy .hero-kicker {
+  margin-bottom: 0.55rem;
+}
+
+.hero-acronym {
+  max-width: 29rem;
+  margin: 0 0 1.3rem;
+  color: rgba(0, 0, 0, 0.52);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
 .eyebrow,
 .section-kicker {
   margin: 0 0 1rem;
