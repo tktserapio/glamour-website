@@ -1204,6 +1204,90 @@ h2 {
   margin-top: -0.45rem;
 }
 
+.profile-card.has-profile {
+  cursor: pointer;
+}
+
+.profile-card.has-profile .profile-image {
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.profile-card.has-profile:hover .profile-image,
+.profile-card.has-profile:focus-visible .profile-image {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(23, 32, 29, 0.12);
+}
+
+.profile-card.has-profile:focus-visible {
+  outline: 2px solid rgba(122, 38, 51, 0.45);
+  outline-offset: 6px;
+}
+
+.profile-dialog {
+  width: min(calc(100% - 2rem), 38rem);
+  padding: clamp(1.5rem, 4vw, 3rem);
+  border: 0;
+  background: #ffffff;
+  color: var(--text);
+  box-shadow: 0 28px 80px rgba(0, 0, 0, 0.22);
+}
+
+.profile-dialog::backdrop {
+  background: rgba(17, 17, 17, 0.44);
+  backdrop-filter: blur(3px);
+}
+
+.profile-dialog-close {
+  position: absolute;
+  top: 0.8rem;
+  right: 0.9rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--text);
+  font-size: 1.8rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.profile-dialog-kicker {
+  margin: 0 0 0.65rem;
+  color: rgba(0, 0, 0, 0.52);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.profile-dialog h2 {
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+
+.profile-dialog-bio {
+  margin: 1.25rem 0 0;
+  color: rgba(0, 0, 0, 0.68);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.profile-dialog-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.profile-dialog-link {
+  font-size: 0.86rem;
+  font-weight: 700;
+}
+
+.profile-dialog-link:hover {
+  color: var(--burgundy);
+}
+
 .site-footer {
   padding: 2rem 0 2.4rem;
   background: transparent;
